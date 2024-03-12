@@ -15,9 +15,6 @@ public class UsuarioParceiroController {
 
 	@RequestMapping(value = { "cadastroDeUsuarioParceiro" }, method = RequestMethod.GET)
 	public String cadastroDeUsuarioParceiro(HttpSession session, Model model) throws Exception {
-		if (session.getAttribute("loginFunc") == null) {
-			return "login/loginFuncionario";
-		}
 
 		return "usuarioParceiro/cadastroDeUsuarioParceiro";
 	}

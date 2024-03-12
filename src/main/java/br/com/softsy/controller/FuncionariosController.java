@@ -41,13 +41,13 @@ public class FuncionariosController {
 		return "funcionarios/editarFuncionario";
 	}
 
-	@RequestMapping(value = { "listarFuncionarios" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "ato-regulatorio" }, method = RequestMethod.GET)
 	public String listarFuncionarios(HttpSession session, Model model) throws Exception {
 		/*if (session.getAttribute("loginFunc") == null) {
 			return "login/loginFuncionario";
 		}
 */
-		return "funcionarios/listarFuncionario";
+		return "funcionarios/atoRegulatorio";
 	}
 	
 	//Lojista ---------------------------------------------------------------------------------- //

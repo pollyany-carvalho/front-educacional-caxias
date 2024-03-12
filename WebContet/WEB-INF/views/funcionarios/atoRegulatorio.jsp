@@ -65,96 +65,64 @@ String contextPath = request.getContextPath();
 			<div class="rect4"></div>
 		</div>
 	</div>
-	<header>
-		<section id="modalMenu" class="abracaMenu modalMenu">
-			<img class="logoSumare"
-				src="<%=contextPath%>/resources/assets/img/logo.svg"
-				alt="Logo Sumare" />
-			<button id="teste" type="button" class="btn botaoDesativaMenu "><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
-			<hr />
-			<p>
-				<i class="fa-solid fa-user me-2" style="width: 28px;"></i> <span>${funcionario.nome}</span>
-			</p>
-			<hr />
-			<nav class="nav-sidebar">
+	<header id="menu"> </header>
 
-				
-			         <a href="listarCargos" class="mb-1"><i class="fa-regular fa-address-card"></i> 
-				<span>Cargos</span> 
-			    </a> <a href="listarCategoria" class="mb-1"> <i class="fa-solid fa-clipboard"></i> 
-				<span>Categorias</span>
-				</a> <a href="listarSubCategoria" class="mb-1"> <i class="fa-solid fa-paste"></i>
-				<span>Sub-Categoria</span>
-				</a> <a href="listarLojista" class="mb-1"> <i class="fa-solid fa-shop"></i> 
-				<span>Lojistas</span>
-				</a> <a href="listarColaboradores" class="mb-1"> <i class="fa-regular fa-handshake"></i>
-				<span>Colaboradores</span>
-				</a> <a href="listarFuncionarios" class="mb-1"> <i class="fa-solid fa-user-group"></i> 
-				<span>Funcionários</span>
-				</a> <a href="listarProduto" class="mb-1"> <i class="fa-solid fa-barcode"></i> 
-				<span>Produtos</span>
-				</a> <a href="logoff" id="sair"> <i class="fa-solid fa-right-from-bracket"></i> 
-				<span>Sair</span>
-				</a>
-				
-			</nav>
-		</section>
-	</header>
-	
-	<button type="button" class="btn botaoAtivaMenu "><i class="fa-solid fa-arrow-left mover-left"></i></button>
+	<button type="button" class="btn botaoAtivaMenu ">
+		<i class="fa-solid fa-arrow-left mover-left"></i>
+	</button>
 	<main class="py-4 container-res">
 		<section class="mb-5">
 			<div class="card">
 				<div class="card-body title">
-					<i class="fa-solid fa-user-group fa-lg"></i> <span>Lista de
-						Funcionários</span>
+					<i class="fa-solid fa-user-group fa-lg"></i> <span>Atos Regulatórios</span>
 				</div>
 			</div>
 		</section>
 		<section class="pt-4 card card-table px-5 py-3">
-			<div class="mt-3 mb-2"
-				style="display: flex; flex-flow:column;align-items:center; gap:20px">
-				<a href="cadastroFuncionario"
-					class="btn btn-primary btn-lg px-3 py-1">Novo funcionário</a>
-				<div class="input-group">
-					<input id="inputBusca" type="text" class="form-control inputForm"
-						placeholder="Buscar funcionário" /> <span
-						class="input-group-text icone-pesquisa"><i class="fas fa-search"></i></span>
+			<div class="mt-3 mb-3" style="display: flex; align-items: center;">
+
+				<div class='col-6'>
+					<div class="input-group">
+						<input id="inputBusca" type="text" class="form-control inputForm"
+							placeholder="Buscar" /> <span
+							class="input-group-text icone-pesquisa"><i
+							class="fas fa-search"></i></span>
+					</div>
 				</div>
-				
+				<a href="cadastroFuncionario"
+					class="btn btn-primary btn-lg px-3 py-1 ms-auto">Novo Ato
+					Regulatório</a>
+
 			</div>
 
 			<table
 				class="table tabela-funcionarios table-striped table-bordered mb-0 caption-top mx-auto">
-				<caption>Funcionários cadastrados</caption>
+				<caption>Atos Regulatórios cadastrados</caption>
 				<thead>
 					<tr>
-						<th scope="col" width="10%">Ativo</th>
-						<th scope="col">Nome</th>
-						<th scope="col">Cargo</th>
-						<th scope="col">CPF</th>
-						<th scope="col" width="15%">Ações</th>
+						<th scope="col">Ato Regulatório</th>
 					</tr>
 				</thead>
-				<tbody id="colaTabela" class="table-group-divider"></tbody>
+				<tbody id="cola-atos">
+					<tr>
+						<td>Ato Regulatório 1</td>
+					</tr>
+					<tr>
+						<td>Ato Regulatório 2</td>
+					</tr>
+					<tr>
+						<td>Ato Regulatório 3</td>
+					</tr>
+				</tbody>
 			</table>
-			<nav aria-label="Page navigation example">
-  <ul id="pagination-list" class="pagination">
-    <li id="prev" class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li id="next" class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-</nav>
-		<!-- <div id="pagination" class="mx-auto">
+			<!-- <div id="pagination" class="mx-auto">
 				<button id="prev" class="btn btn-sm">
 					<i class="fa-solid fa-angle-left fa-xl"></i>
 				</button>
 				<button id="next" class="btn btn-sm">
 					<i class="fa-solid fa-angle-right fa-xl"></i>
 				</button>
-			</div>  -->	 
+			</div> -->
 		</section>
 	</main>
 
