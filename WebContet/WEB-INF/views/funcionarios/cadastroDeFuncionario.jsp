@@ -54,11 +54,11 @@ String contextPath = request.getContextPath();
 	crossorigin="anonymous"></script>
 <link rel="stylesheet"
 	href="<%=contextPath%>/resources/assets/css/style.css" />
-	<!-- Animation-css -->
+	<!-- Animation-css 
 	<link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  />-->
 </head>
 
 <body>
@@ -73,8 +73,8 @@ String contextPath = request.getContextPath();
 	<header>
 		<section id="modalMenu" class="abracaMenu modalMenu">
 			<img class="logoSumare animate__animated animate__bounceIn"
-				src="<%=contextPath%>/resources/assets/img/logo.svg"
-				alt="Logo Sumare" />
+				src="<%=contextPath%>/resources/assets/img/logoBranco.png"
+				alt="Logo Prefeitura Caxias do Sul" />
 			<button id="teste" type="button" class="btn botaoDesativaMenu "><i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i></button>
 			<hr />
 			<p>
@@ -106,7 +106,8 @@ String contextPath = request.getContextPath();
 		</section>
 	</header>
 	
-	<button type="button" class="btn botaoAtivaMenu "><i class="fa-solid fa-arrow-left mover-left"></i></button>
+	<button type="button" class="btn botaoAtivaMenu ">
+	<i class="fa-solid fa-arrow-left mover-left"></i></button>
 	<main class="py-4 container-res">
 		<section class="mb-5">
 			<div class="card">
@@ -117,7 +118,7 @@ String contextPath = request.getContextPath();
 			</div>
 		</section>
 		<section class="pt-4">
-			<form id="form-funcionario"
+			<form class='formClass' id="form-funcionario"
 				class="card form p-5 col-8 mx-auto animate__animated animate__bounceInUp">
 				<h1 id="tituloForm" class="text-left mb-5">Cadastrar Funcionário</h1>
 				<input type="text" id="usuarioCadastro" hidden
@@ -188,7 +189,39 @@ String contextPath = request.getContextPath();
 							<button onclick="ativaSenhas()" type="button" class="btn btn-primary">Alterar Senha</button>
 						</div>
 					</div>
-					</div>
+				</div>
+				
+				
+				  <div class="tab-wrap">
+				
+				    <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+				    <label for="tab1">Aba1 </label>
+				
+				    <input type="radio" id="tab2" name="tabGroup1" class="tab">
+				    <label for="tab2">Aba 2</label>
+				
+				    <input type="radio" id="tab3" name="tabGroup1" class="tab">
+				    <label for="tab3">Aba 4</label>
+				
+				    <div class="tab__content">
+				      <h3>ABA 1 Titulo</h3>
+				       <p>ABA 1 corpo de texto</p>
+				    </div>
+				
+				    <div class="tab__content">
+				      <h3>ABA 2 Titulo</h3>
+				       <p>ABA 2  corpo de texto</p>
+				    </div>
+				
+				    <div class="tab__content">
+				      <h3>ABA 3 Titulo</h3>
+				      
+				      <p>ABA 3  corpo de texto</p>
+				    </div>
+				
+				  </div>
+
+  
 
 				<div class="row mb-2">
 					<div class="col-md-12 text-center">
